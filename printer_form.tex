@@ -1,0 +1,9 @@
+% method idea from http://www.mostlymaths.net/2010/11/creating-a6-booklets-in-7-easy-steps.html
+
+\documentclass[letterpaper]{article}
+\usepackage[pdftex]{color,graphicx,epsfig}
+\usepackage[margin=0cm]{geometry}
+\usepackage[final]{pdfpages}
+\begin{document}
+\includepdf[pages=-,signature=6,landscape,frame=false]{booklet.pdf}
+\end{document}

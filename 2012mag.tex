@@ -1,0 +1,56 @@
+\documentclass[12pt,twoside]{article}
+
+\usepackage{litmag}
+\usepackage{indentfirst}
+
+\begin{document}
+
+% begin foreplay
+\addtocounter{page}{-3}
+
+% front cover
+\thispagestyle{empty}
+\begin{textblock*}{8.5in}(-17.5px,0px)%
+\includegraphics[width=5.5in, height=8.5in]{cover.png}
+\end{textblock*} 
+\lipsum[1]
+\newpage
+
+
+\garamond
+
+% foreword
+\thispagestyle{empty}
+Foreword goes here.
+\newpage
+
+% table of contents
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% begin content
+\begin{verseEntry}{Poetry}{Me}
+It is an ancient mariner, \\ 
+And he stoppeth one of three. \\ 
+``By thy long grey beard and glittering eye, \\ 
+Now wherefore stopp'st thou me?\\
+\bigskip
+``The Bridegroom's doors are opened wide,\\ 
+And I am next of kin;\\ 
+The guests are met, the feast is set:\\ 
+May'st hear the merry din." 
+\end{verseEntry}
+
+
+\begin{proseEntry}{Hamlet}{Shakes}
+\lettrine{L}{orem}
+\lipsum[1-2]
+\end{proseEntry}
+
+\begin{proseEntry}{Lear}{Shakes}
+\lipsum[3-4]
+\end{proseEntry}
+
+
+\end{document}
