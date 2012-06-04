@@ -1,0 +1,71 @@
+% paper setup
+% margins
+% letter paper = 11in x 8.5in -- we use half
+%\usepackage[margin=0.75in,papersize={5.5in,8.5in}]{geometry} 
+\usepackage[top=0.75in,bottom=0.75in,left=0.5in,right=0.5in,papersize={5.5in,8.5in}]{geometry}
+
+% header design
+\usepackage{fancyhdr} \pagestyle{fancy} \fancyhf{}
+\setlength{\headheight}{15.2pt}
+\fancyhead[RE]{\thepage}
+\fancyhead[LO]{\thepage}
+
+%
+% Environments for creating entries
+%
+
+% prose -- poetry
+\newenvironment{poetry}[2]%
+{\phantomsection{} \addcontentsline{toc}{subsection}{#1 by #2}%
+\noindent \LARGE{\textbf{#1}}\\%
+\noindent \small{\textit{By: #2}} \\%
+\obeylines \setlength{\parindent}{0cm}}%
+{\newpage}
+
+% verse -- everything else
+\newenvironment{verseEnt}[2]%
+{\phantomsection{} \addcontentsline{toc}{subsection}{#1 by #2}%
+\noindent \LARGE{\textbf{#1}}\\%
+\noindent \small{\textit{By: #2}}\\%
+\setlength{\parindent}{1cm}\\[-0.37cm]}%
+{\newpage}
+
+%
+% Other stuff
+%
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+
+% for block quotes
+\usepackage{csquotes}
+\SetBlockEnvironment{quotation}
+
+% verbatim support -- for complicated poems
+\usepackage{verbatim}
+
+% for big hanging letters in prose
+\usepackage{lettrine}
+
+% line spacing
+\usepackage{setspace} \singlespacing
+
+% do not show title numbering
+\setcounter{secnumdepth}{-1}  
+
+% allow \importgraphics
+\usepackage{graphicx}
+% take up entire page, ignoring margins
+\usepackage[absolute,overlay]{textpos}
+
+% generate lorem ipsum text
+\usepackage{lipsum}
+
+% straight up taken from http://gael-varoquaux.info/computers/garamond/index.html
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{garamond}
+
+% Microtyping support -- load after all fonts
+\usepackage[protrusion=true,expansion=true]{microtype}
